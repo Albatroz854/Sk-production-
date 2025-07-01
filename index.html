@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SK Production - Minimal</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333333;
+    }
+    .aspect-w-3 {
+      position: relative;
+      padding-bottom: calc(4 / 3 * 100%);
+      height: 0;
+      overflow: hidden;
+    }
+    .aspect-w-3 img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content-section {
+      display: none;
+    }
+    .content-section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <header class="bg-white p-6 shadow-sm border-b border-gray-100">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-3xl font-bold text-gray-800 mb-4 md:mb-0">SK Production</h1>
+      <nav>
+        <ul class="flex space-x-6 text-md text-gray-600">
+          <li><a href="#" class="hover:text-gray-900" onclick="showSection('home')">Home</a></li>
+          <li><a href="#" class="hover:text-gray-900" onclick="showSection('projects')">Projects</a></li>
+          <li><a href="#" class="hover:text-gray-900" onclick="showSection('about')">About</a></li>
+          <li><a href="#" class="hover:text-gray-900" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container mx-auto my-12 p-6 bg-white rounded-lg shadow-lg flex-grow">
+    <!-- Home -->
+    <div id="home-section" class="content-section active">
+      <section class="text-center mb-12">
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">Crafting Visual Stories</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Dedicated to bringing compelling narratives to life through exceptional film and media production.
+        </p>
+      </section>
+      <section class="mb-12 bg-gray-100 p-8 rounded-lg shadow-inner text-center">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Upcoming Work</h3>
+        <p class="text-xl font-bold text-gray-700">Lord of the Deep</p>
+        <p class="text-md text-gray-600 mt-2">
+          Get ready for an epic adventure! Stay tuned for more details on our next big project.
+        </p>
+      </section>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects-section" class="content-section">
+      <section class="text-center mb-12">
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">Our Famous Works</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Explore a selection of our diverse and impactful projects.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h3 class="text-2xl font-semibold text-gray-800 text-center mb-8">Featured Works</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- Project 1 -->
+          <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:scale-105 transform transition">
+            <div class="aspect-w-3 border-b border-gray-200">
+              <img src="images/Thudarilla.jpg" alt="Thudarilla" onerror="this.onerror=null;this.src='https://placehold.co/300x400/E0E0E0/333333?text=Image+Not+Found';">
+            </div>
+            <p class="text-center p-4 text-lg font-medium text-gray-800">Thudarilla</p>
+          </div>
+          <!-- Project 2 -->
+          <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:scale-105 transform transition">
+            <div class="aspect-w-3 border-b border-gray-200">
+              <img src="images/AgentX.jpg" alt="Agent X" onerror="this.onerror=null;this.src='https://placehold.co/300x400/E0E0E0/333333?text=Image+Not+Found';">
+            </div>
+            <p class="text-center p-4 text-lg font-medium text-gray-800">Agent X</p>
+          </div>
+          <!-- Project 3 -->
+          <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:scale-105 transform transition">
+            <div class="aspect-w-3 border-b border-gray-200">
+              <img src="images/DaysGone.jpg" alt="Days Gone" onerror="this.onerror=null;this.src='https://placehold.co/300x400/E0E0E0/333333?text=Image+Not+Found';">
+            </div>
+            <p class="text-center p-4 text-lg font-medium text-gray-800">Days Gone</p>
+          </div>
+          <!-- Project 4 -->
+          <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:scale-105 transform transition">
+            <div class="aspect-w-3 border-b border-gray-200">
+              <img src="images/TheBatman.jpg" alt="The Batman" onerror="this.onerror=null;this.src='https://placehold.co/300x400/E0E0E0/333333?text=Image+Not+Found';">
+            </div>
+            <p class="text-center p-4 text-lg font-medium text-gray-800">The Batman</p>
+          </div>
+          <!-- Project 5 -->
+          <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:scale-105 transform transition">
+            <div class="aspect-w-3 border-b border-gray-200">
+              <img src="images/Dune2.jpg" alt="Dune 2" onerror="this.onerror=null;this.src='https://placehold.co/300x400/E0E0E0/333333?text=Image+Not+Found';">
+            </div>
+            <p class="text-center p-4 text-lg font-medium text-gray-800">Dune 2</p>
+          </div>
+          <!-- Project 6 -->
+          <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:scale-105 transform transition">
+            <div class="aspect-w-3 border-b border-gray-200">
+              <img src="images/AvatarWayofAdoor.jpg" alt="Avatar Way of Adoor" onerror="this.onerror=null;this.src='https://placehold.co/300x400/E0E0E0/333333?text=Image+Not+Found';">
+            </div>
+            <p class="text-center p-4 text-lg font-medium text-gray-800">Avatar Way of Adoor</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- About -->
+    <div id="about-section" class="content-section">
+      <section class="text-center mb-12">
+        <h2 class="text-4xl font-semibold text-gray-800 mb-4">Our Story & Team</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Learn more about SK Production, our mission, and the talented individuals behind our success.
+        </p>
+      </section>
+      <section class="mb-12 bg-gray-50 p-8 rounded-lg shadow-inner">
+        <h3 class="text-2xl font-semibold text-gray-800 text-center mb-6">About SK Production</h3>
+        <div class="max-w-3xl mx-auto text-gray-700 space-y-6">
+          <p>
+            SK Production is a leading media production house dedicated to creating captivating and high-quality visual content.
+          </p>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">SK Production: A Vision in Motion</h4>
+            <p>
+              SK Production, spearheaded by <strong>Safal</strong>, is a dynamic and innovative media production house committed to crafting compelling visual narratives.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">Director: Vasudev</h4>
+            <p>
+              At the helm of many of our groundbreaking projects is <strong>Vasudev</strong>, a visionary director known for his unique storytelling approach.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">Main Actor: Vaisakh</h4>
+            <p>
+              <strong>Vaisakh</strong> stands as a prominent talent in SK Production's cast with versatile performances.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-xl font-semibold mb-2">Upcoming Work</h4>
+            <p>
+              Stay tuned for updates on our upcoming films, web series, and digital content that promise to captivate and inspire.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact-section" class="content-section">
+      <section class="text-center bg-gray-100 p-8 rounded-lg shadow-inner">
+        <h3 class="text-3xl font-semibold text-gray-800 mb-6">Get in Touch with SK Production</h3>
+        <p class="text-lg text-gray-600 mb-8">
+          We'd love to hear from you! Reach out to discuss your next project or for any inquiries.
+        </p>
+        <form class="max-w-md mx-auto space-y-4">
+          <input type="text" placeholder="Your Name" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-gray-400" />
+          <input type="email" placeholder="Your Email" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-gray-400" />
+          <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-gray-400"></textarea>
+          <button type="submit" class="bg-gray-800 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-full shadow-md transform transition hover:scale-105 focus:ring-2 focus:ring-gray-400">
+            Send Message
+          </button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-6 mt-8">
+    <div class="container mx-auto text-center text-gray-400 text-sm">
+      &copy; 2025 SK Production. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId + '-section').classList.add('active');
+      document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('home');
+    });
+  </script>
+</body>
+</html>
